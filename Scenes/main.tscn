@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b18rk2fjtho0n"]
+
+[ext_resource type="TileSet" uid="uid://d3w2plrbpe4jv" path="res://Assets/TileSets/illumiate.tres" id="1_jjgbg"]
+
+[node name="Main" type="Node2D" unique_id=1485953181]
+
+[node name="Node2D" type="TileMapLayer" parent="." unique_id=551111328]
+tile_map_data = PackedByteArray(0, 0, 255, 255, 0, 0, 0, 0, 1, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 2, 0, 0, 0, 254, 255, 0, 0, 0, 0, 1, 0, 2, 0, 0, 0)
+tile_set = ExtResource("1_jjgbg")
+
+[node name="Node2D2" type="Node2D" parent="." unique_id=786081756]
