@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b18rk2fjtho0n"]
 
 [ext_resource type="TileSet" uid="uid://d3w2plrbpe4jv" path="res://Assets/TileSets/illumiate.tres" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://b3y6uqfcjlngf" path="res://player.tscn" id="2_bo1nx"]
 
 [node name="Main" type="Node2D" unique_id=1485953181]
 
@@ -9,3 +10,10 @@ tile_map_data = PackedByteArray(0, 0, 255, 255, 0, 0, 0, 0, 1, 0, 2, 0, 0, 0, 0,
 tile_set = ExtResource("1_jjgbg")
 
 [node name="Node2D2" type="Node2D" parent="." unique_id=786081756]
+
+[node name="Player" parent="." unique_id=1352380324 instance=ExtResource("2_bo1nx")]
+position = Vector2(-72, -98)
+collision_mask = 7
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1180090236]
+position = Vector2(3, 21)
