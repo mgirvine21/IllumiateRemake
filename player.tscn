@@ -178,7 +178,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_op7ga")
 }],
-"loop": 1,
+"loop": true,
 "name": &"default",
 "speed": 5.0
 }, {
@@ -207,7 +207,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jm5j8")
 }],
-"loop": 1,
+"loop": true,
 "name": &"fall",
 "speed": 5.0
 }, {
@@ -233,7 +233,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_efrwb")
 }],
-"loop": 1,
+"loop": true,
 "name": &"jump",
 "speed": 5.0
 }, {
@@ -268,7 +268,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ibah8")
 }],
-"loop": 1,
+"loop": true,
 "name": &"walk",
 "speed": 5.0
 }]
@@ -278,7 +278,10 @@ radius = 32.0
 height = 64.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1352380324]
+collision_layer = 3
+collision_mask = 5
 script = ExtResource("1_hqtel")
+player = 0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1848031570]
 sprite_frames = SubResource("SpriteFrames_y15wc")

@@ -24,6 +24,7 @@ var lives: int = 3:
 func collect_star():
 	stars += 1
 	star_collected.emit()
+	print("+1 star")
 
 func setup_timer(time_limit: int):
 	timer = Timer.new()
