@@ -3,25 +3,33 @@
 [ext_resource type="TileSet" uid="uid://d3w2plrbpe4jv" path="res://Assets/TileSets/illumiate.tres" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://b3y6uqfcjlngf" path="res://player.tscn" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://gu2832xuxhj2" path="res://star.tscn" id="3_8gbba"]
+[ext_resource type="PackedScene" uid="uid://dn3vauu0flxla" path="res://hud.tscn" id="4_jjvhh"]
 
 [node name="Main" type="Node2D" unique_id=1485953181]
 
 [node name="Node2D" type="TileMapLayer" parent="." unique_id=551111328]
+texture_filter = 1
 tile_map_data = PackedByteArray("AAD//wAAAAABAAIAAAAAAAAAAAABAAIAAAABAAAAAAABAAIAAAD+/wAAAAABAAIAAAD9/wAAAAAAAAIAAAD9////AAAAAAEAAAD9//7/AAAAAAEAAAD9//3/AAAAAAAAAAD+//3/AAABAAAAAAD///z/AAABAAAAAAAAAPz/AAACAAAAAAABAPz/AAADAAAAAAACAPz/AAAEAAAAAAACAP3/AAAEAAEAAAD+//7/AAAFAAIAAAAAAP3/AAACAAEAAAABAP3/AAADAAEAAAD///3/AAAFAAAAAAD///7/AAAFAAEAAAD/////AAAFAAIAAAD8////AAADAAMAAAD8/wAAAAACAAMAAAD9/wEAAAACAAMAAAD8/wEAAAABAAMAAAD//wEAAAACAAMAAAABAAEAAAACAAMAAAAAAAEAAAADAAMAAAD+/wEAAAABAAMAAAD8//7/AAABAAMAAAA=")
 tile_set = ExtResource("1_jjgbg")
+collision_visibility_mode = 1
 
 [node name="Node2D2" type="Node2D" parent="." unique_id=786081756]
 
 [node name="Player" parent="." unique_id=1352380324 instance=ExtResource("2_bo1nx")]
 position = Vector2(-72, -98)
 collision_mask = 7
+floor_snap_length = 2.0
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1180090236]
 position = Vector2(3, 21)
-position_smoothing_enabled = true
+process_callback = 0
+limit_enabled = false
+position_smoothing_speed = 15.0
 
 [node name="Star" parent="." unique_id=1840852587 instance=ExtResource("3_8gbba")]
 position = Vector2(179, -75)
 
 [node name="Star2" parent="." unique_id=144646010 instance=ExtResource("3_8gbba")]
 position = Vector2(75, -48)
+
+[node name="HUD" parent="." unique_id=94779443 instance=ExtResource("4_jjvhh")]

@@ -80,13 +80,14 @@ func _gliade() -> void:
 func _physics_process(delta):
 	if Global.lives <= 0:
 		return
-
 	if is_on_floor():
-		coyote_timer = (coyote_time + delta)
+		coyote_timer = coyote_time
 		double_jump_armed = false
+	else:
+		coyote_timer -= delta
 
 	if Input.is_action_just_pressed(Actions.lookup(player, "jump")):
-		jump_buffer_timer = (jump_buffer + delta)
+		jump_buffer_timer = jump_buffer
 
 	if jump_buffer_timer > 0 and (double_jump_armed or coyote_timer > 0):
 		_jump()
@@ -94,40 +95,31 @@ func _physics_process(delta):
 	if Input.is_action_just_released(Actions.lookup(player, "jump")) and velocity.y < 0:
 		velocity.y *= (1 - (jump_cut_factor / 100.00))
 
-	if coyote_timer <= 0:
+	if not is_on_floor():
 		velocity.y += gravity * delta
 
 	var direction = Input.get_axis(Actions.lookup(player, "left"), Actions.lookup(player, "right"))
-
 	if direction:
-		velocity.x = move_toward(velocity.x, 
-		sign(direction) * speed,
-		abs(direction) * acceleration * delta,
-		)
+		velocity.x = move_toward(velocity.x, sign(direction) * speed, abs(direction) * acceleration * delta)
 	else:
-		velocity.x = move_toward(velocity.x, 
-		0, 
-		acceleration * delta)
-		
+		velocity.x = move_toward(velocity.x, 0, acceleration * delta)
+
 	if velocity == Vector2.ZERO:
 		_sprite.play("default")
-	else: 
+	else:
 		if not is_on_floor():
-			if velocity.y > 0:
-				_sprite.play("fall")
-			else: 
-				_sprite.play("jump")
+			_sprite.play("fall" if velocity.y > 0 else "jump")
 		else:
 			_sprite.play("walk")
 		_sprite.flip_h = velocity.x < 0
 
 	move_and_slide()
-	
-	coyote_timer -= delta
-	jump_buffer_timer -= delta
+
+	jump_buffer_timer -= delta 
 
 func reset():
 	position = original_position
+	reset_physics_interpolation()
 	velocity = Vector2.ZERO
 	coyote_timer = 0
 	jump_buffer_timer = 0
