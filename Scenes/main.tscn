@@ -3,9 +3,26 @@
 [ext_resource type="TileSet" uid="uid://d3w2plrbpe4jv" path="res://Assets/TileSets/illumiate.tres" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://b3y6uqfcjlngf" path="res://player.tscn" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://gu2832xuxhj2" path="res://star.tscn" id="3_8gbba"]
+[ext_resource type="Script" uid="uid://dq76u6y56cnpl" path="res://Scenes/camera_2d.gd" id="3_kry3j"]
 [ext_resource type="PackedScene" uid="uid://dn3vauu0flxla" path="res://hud.tscn" id="4_jjvhh"]
 
 [node name="Main" type="Node2D" unique_id=1485953181]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=710082304]
+visible = false
+offset_left = -529.0
+offset_top = -392.0
+offset_right = 439.0
+offset_bottom = 209.0
+color = Color(0.16862746, 0.047058824, 1, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1398473097]
+visible = false
+offset_left = -551.0
+offset_top = -510.0
+offset_right = 417.0
+offset_bottom = -233.0
+color = Color(0.52830046, 0.15890831, 0.56615293, 1)
 
 [node name="Node2D" type="TileMapLayer" parent="." unique_id=551111328]
 texture_filter = 1
@@ -15,16 +32,19 @@ collision_visibility_mode = 1
 
 [node name="Node2D2" type="Node2D" parent="." unique_id=786081756]
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1180090236 node_paths=PackedStringArray("player")]
+position = Vector2(-69, -77)
+zoom = Vector2(2, 2)
+process_callback = 0
+limit_enabled = false
+position_smoothing_speed = 15.0
+script = ExtResource("3_kry3j")
+player = NodePath("../Player")
+
 [node name="Player" parent="." unique_id=1352380324 instance=ExtResource("2_bo1nx")]
 position = Vector2(-72, -98)
 collision_mask = 7
 floor_snap_length = 2.0
-
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1180090236]
-position = Vector2(3, 21)
-process_callback = 0
-limit_enabled = false
-position_smoothing_speed = 15.0
 
 [node name="Star" parent="." unique_id=1840852587 instance=ExtResource("3_8gbba")]
 position = Vector2(179, -75)

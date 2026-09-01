@@ -112,8 +112,19 @@ func _physics_process(delta):
 		else:
 			_sprite.play("walk")
 		_sprite.flip_h = velocity.x < 0
+	var old_position := global_position
 
 	move_and_slide()
+
+	var actual_motion := global_position - old_position
+
+	if abs(velocity.x) > 1.0 and abs(actual_motion.x) > 0.001:
+		if sign(actual_motion.x) != sign(velocity.x):
+			print(
+			"ACTUALLY BACKWARD!",
+			" velocity=", velocity.x,
+			" motion=", actual_motion.x,
+			" position=", global_position.x)
 
 	jump_buffer_timer -= delta 
 
