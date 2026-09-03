@@ -22,6 +22,8 @@ var double_jump_armed: bool = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var original_position: Vector2
 
+var is_sleeping: bool = false
+var quota_reached: bool = true
 
 @onready var _sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var _initial_sprite_frames: SpriteFrames = $AnimatedSprite2D.sprite_frames
@@ -72,10 +74,16 @@ func stomp():
 	double_jump_armed = false
 	_jump()
 
-func _gliade() -> void: 
+func _glide() -> void: 
 	if not is_on_floor() and Input.is_action_pressed(Actions.lookup(player, "jump")):
 		if velocity.y > GLIDE_TERMINAL_VELOCITY:
 			velocity.y = GLIDE_TERMINAL_VELOCITY
+
+func _interact() -> void:
+	if !is_sleeping and quota_reached and Input.is_action_just_pressed(Actions.lookup(player,"interact" )):
+		is_sleeping = true
+		print("sleep")
+		_sprite.play("sleep")
 
 func _physics_process(delta):
 	if Global.lives <= 0:
@@ -104,7 +112,11 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, acceleration * delta)
 
-	if velocity == Vector2.ZERO:
+		_interact()
+
+	if is_sleeping:
+		_sprite.play("sleep")
+	elif velocity == Vector2.ZERO:
 		_sprite.play("default")
 	else:
 		if not is_on_floor():

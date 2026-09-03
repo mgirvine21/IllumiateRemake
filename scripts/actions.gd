@@ -4,6 +4,7 @@ const ACTIONS = [
 	&"jump",
 	&"left",
 	&"right",
+	&"interact",
 ]
 
 @onready var _player_actions = _setup_actions()
