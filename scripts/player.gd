@@ -84,6 +84,11 @@ func _interact() -> void:
 		is_sleeping = true
 		print("sleep")
 		_sprite.play("sleep")
+		place_stars()
+
+func place_stars() -> void:
+	pass
+	#PLACE NIGHTLIGHTS FOR DRAGON
 
 func _physics_process(delta):
 	if Global.lives <= 0:
