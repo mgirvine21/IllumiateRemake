@@ -62,7 +62,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ou736")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
@@ -75,12 +75,14 @@ collision_layer = 2
 script = ExtResource("1_e2x7v")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1082880643]
-position = Vector2(2.3841858e-07, -16)
-scale = Vector2(0.16796875, 0.16796875)
+position = Vector2(-0.043700933, -91.0437)
+scale = Vector2(0.7105961, 0.7105961)
 sprite_frames = SubResource("SpriteFrames_frsb1")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1759705512]
-position = Vector2(0, -16)
+position = Vector2(-0.043701172, -91.0437)
+scale = Vector2(4.2305255, 4.2305255)
 shape = SubResource("CircleShape2D_w0tmw")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
