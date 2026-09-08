@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" format=3 uid="uid://d3w2plrbpe4jv"]
+[gd_resource type="TileSet" format=3 uid="uid://cppatdlkgjlhm"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bnvoy"]
 load_path = "res://.godot/imported/generativetilemapLATESTFORREALL-export.png-582554bd69c99ed5bf4df2c0b51be9b1.ctex"
@@ -60,7 +60,6 @@ texture_region_size = Vector2i(128, 128)
 1:1/0 = 0
 1:1/0/terrain_set = 0
 1:1/0/terrain = 0
-1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
 1:1/0/terrains_peering_bit/right_side = 0
 1:1/0/terrains_peering_bit/bottom_right_corner = 0
 1:1/0/terrains_peering_bit/bottom_side = 0
