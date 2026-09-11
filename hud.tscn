@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://wrcqogjoajkx" path="res://hud.gd" id="1_64ctp"]
 [ext_resource type="Texture2D" uid="uid://diggsrm3n6a77" path="res://Assets/player_nest.png" id="2_8sq4i"]
+[ext_resource type="FontFile" uid="uid://csdrjw1s586cc" path="res://Assets/Fonts/RUBBBB__.TTF" id="2_640wx"]
 
 [node name="HUD" type="CanvasLayer" unique_id=94779443]
 script = ExtResource("1_64ctp")
@@ -14,12 +15,14 @@ offset_bottom = 215.0
 
 [node name="Label" type="Label" parent="Start" unique_id=635219740]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_640wx")
 theme_override_font_sizes/font_size = 25
 text = "Instructions"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="Start" unique_id=1578869487]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_640wx")
 theme_override_font_sizes/font_size = 25
 text = "You are a sleepy dragon, collect the stars for your nightlight and go rest."
 horizontal_alignment = 1
@@ -27,6 +30,7 @@ vertical_alignment = 3
 
 [node name="Label3" type="Label" parent="Start" unique_id=1414364018]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_640wx")
 theme_override_font_sizes/font_size = 25
 text = "Press any key to start"
 horizontal_alignment = 1
@@ -46,6 +50,7 @@ offset_right = 32.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_640wx")
 theme_override_font_sizes/font_size = 25
 text = "You Win"
 
@@ -63,24 +68,27 @@ offset_right = 35.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_640wx")
 theme_override_font_sizes/font_size = 25
 text = "You Lose"
 
 [node name="CollectedStars" type="Label" parent="." unique_id=80972815]
 unique_name_in_owner = true
 offset_left = 14.0
-offset_top = 79.0
-offset_right = 71.0
-offset_bottom = 102.0
+offset_top = 94.0
+offset_right = 137.0
+offset_bottom = 128.0
+theme_override_fonts/font = ExtResource("2_640wx")
 theme_override_font_sizes/font_size = 25
 text = "Stars: 0"
 
 [node name="TimeLeft" type="Label" parent="." unique_id=1634601728]
 unique_name_in_owner = true
 offset_left = 15.0
-offset_top = 48.0
+offset_top = 63.0
 offset_right = 55.0
-offset_bottom = 83.0
+offset_bottom = 98.0
+theme_override_fonts/font = ExtResource("2_640wx")
 theme_override_font_sizes/font_size = 25
 text = "0"
 
