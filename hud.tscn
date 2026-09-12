@@ -7,31 +7,66 @@
 [node name="HUD" type="CanvasLayer" unique_id=94779443]
 script = ExtResource("1_64ctp")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=668583294]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(800, 800)
+offset_left = -4.0
+offset_top = -11.0
+offset_right = 1928.0
+offset_bottom = 1087.0
+color = Color(0.5803922, 0.77254903, 0.58431375, 0.28235295)
+
 [node name="Start" type="VBoxContainer" parent="." unique_id=1218983774]
 unique_name_in_owner = true
-offset_left = 1.0
-offset_right = 1152.0
-offset_bottom = 215.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -870.5
+offset_top = -107.5
+offset_right = 870.5
+offset_bottom = 107.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label" type="Label" parent="Start" unique_id=635219740]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.6313726, 0.9098039, 0.6862745, 1)
+theme_override_colors/font_shadow_color = Color(0.21568628, 0.15294118, 0.44705883, 1)
+theme_override_colors/font_outline_color = Color(0.21568628, 0.15294118, 0.44705883, 1)
+theme_override_constants/outline_size = 12
 theme_override_fonts/font = ExtResource("2_640wx")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 40
 text = "Instructions"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="Start" unique_id=1578869487]
+custom_minimum_size = Vector2(750, 0)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.6313726, 0.9098039, 0.6862745, 1)
+theme_override_colors/font_shadow_color = Color(0.21568628, 0.15294118, 0.44705883, 1)
+theme_override_colors/font_outline_color = Color(0.21568628, 0.15294118, 0.44705883, 1)
+theme_override_constants/outline_size = 12
+theme_override_constants/shadow_outline_size = 7
 theme_override_fonts/font = ExtResource("2_640wx")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 35
 text = "You are a sleepy dragon, collect the stars for your nightlight and go rest."
 horizontal_alignment = 1
 vertical_alignment = 3
+autowrap_mode = 2
 
 [node name="Label3" type="Label" parent="Start" unique_id=1414364018]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.6313726, 0.9098039, 0.6862745, 1)
+theme_override_colors/font_shadow_color = Color(0.21568628, 0.15294118, 0.44705883, 1)
+theme_override_colors/font_outline_color = Color(0.21568628, 0.15294118, 0.44705883, 1)
+theme_override_constants/outline_size = 12
+theme_override_constants/shadow_outline_size = 7
 theme_override_fonts/font = ExtResource("2_640wx")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 30
 text = "Press any key to start"
 horizontal_alignment = 1
 vertical_alignment = 2
@@ -50,6 +85,10 @@ offset_right = 32.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0.6313726, 0.9098039, 0.6862745, 1)
+theme_override_colors/font_shadow_color = Color(0.21568628, 0.15294118, 0.44705883, 1)
+theme_override_colors/font_outline_color = Color(0.21568628, 0.15294118, 0.44705883, 1)
+theme_override_constants/outline_size = 12
 theme_override_fonts/font = ExtResource("2_640wx")
 theme_override_font_sizes/font_size = 25
 text = "You Win"
@@ -68,28 +107,42 @@ offset_right = 35.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0.6313726, 0.9098039, 0.6862745, 1)
+theme_override_colors/font_shadow_color = Color(0.21568628, 0.15294118, 0.44705883, 1)
+theme_override_colors/font_outline_color = Color(0.21568628, 0.15294118, 0.44705883, 1)
+theme_override_constants/outline_size = 12
 theme_override_fonts/font = ExtResource("2_640wx")
 theme_override_font_sizes/font_size = 25
 text = "You Lose"
 
 [node name="CollectedStars" type="Label" parent="." unique_id=80972815]
 unique_name_in_owner = true
-offset_left = 14.0
-offset_top = 94.0
-offset_right = 137.0
-offset_bottom = 128.0
+offset_left = 32.0
+offset_top = 72.0
+offset_right = 203.0
+offset_bottom = 119.0
+theme_override_colors/font_color = Color(0.6313726, 0.9098039, 0.6862745, 1)
+theme_override_colors/font_shadow_color = Color(0.21568628, 0.15294118, 0.44705883, 1)
+theme_override_colors/font_outline_color = Color(0.21568628, 0.15294118, 0.44705883, 1)
+theme_override_constants/outline_size = 12
+theme_override_constants/shadow_outline_size = 7
 theme_override_fonts/font = ExtResource("2_640wx")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 35
 text = "Stars: 0"
 
 [node name="TimeLeft" type="Label" parent="." unique_id=1634601728]
 unique_name_in_owner = true
-offset_left = 15.0
-offset_top = 63.0
-offset_right = 55.0
-offset_bottom = 98.0
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 72.0
+offset_bottom = 68.0
+theme_override_colors/font_color = Color(0.6313726, 0.9098039, 0.6862745, 1)
+theme_override_colors/font_shadow_color = Color(0.21568628, 0.15294118, 0.44705883, 1)
+theme_override_colors/font_outline_color = Color(0.21568628, 0.15294118, 0.44705883, 1)
+theme_override_constants/outline_size = 12
+theme_override_constants/shadow_outline_size = 7
 theme_override_fonts/font = ExtResource("2_640wx")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 35
 text = "0"
 
 [node name="Lives" type="TextureRect" parent="." unique_id=241109656]
