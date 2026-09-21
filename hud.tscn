@@ -60,7 +60,7 @@ autowrap_mode = 2
 
 [node name="Label3" type="Label" parent="Start" unique_id=1414364018]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.6313726, 0.9098039, 0.6862745, 1)
+theme_override_colors/font_color = Color(0.86653703, 0.85544086, 0.43218073, 1)
 theme_override_colors/font_shadow_color = Color(0.21568628, 0.15294118, 0.44705883, 1)
 theme_override_colors/font_outline_color = Color(0.21568628, 0.15294118, 0.44705883, 1)
 theme_override_constants/outline_size = 12
