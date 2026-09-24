@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://b18rk2fjtho0n"]
 
 [ext_resource type="TileSet" uid="uid://bmjwi0pdutttt" path="res://Assets/TileSets/illumiateLatest.tres" id="1_21xkr"]
+[ext_resource type="Texture2D" uid="uid://dp35f5r050ls" path="res://Assets/rocks.png" id="2_6bp64"]
 [ext_resource type="PackedScene" uid="uid://cu1mca85adjo3" path="res://cave_generator.tscn" id="2_21xkr"]
 [ext_resource type="PackedScene" uid="uid://b3y6uqfcjlngf" path="res://player.tscn" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://gu2832xuxhj2" path="res://star.tscn" id="3_8gbba"]
@@ -106,11 +107,8 @@ polygon = PackedVector2Array(-32, -64, 32, -64, 32, -32, 64, -32, 64, 32, 32, 32
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_o1aky"]
 polygon = PackedVector2Array(-32, -64, 32, -64, 32, -32, 64, -32, 64, 32, 32, 32, 32, 64, -32, 64, -32, 32, -64, 32, -64, -32, -32, -32)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bnvoy"]
-load_path = "res://.godot/imported/generativetilemapLATESTFORREALL-export.png-582554bd69c99ed5bf4df2c0b51be9b1.ctex"
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kry3j"]
-texture = SubResource("CompressedTexture2D_bnvoy")
+texture = ExtResource("2_6bp64")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:0/0/terrain_set = 0
