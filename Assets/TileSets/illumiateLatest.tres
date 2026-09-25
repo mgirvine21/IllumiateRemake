@@ -1,10 +1,9 @@
 [gd_resource type="TileSet" format=3 uid="uid://bmjwi0pdutttt"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bnvoy"]
-load_path = "res://.godot/imported/generativetilemapLATESTFORREALL-export.png-582554bd69c99ed5bf4df2c0b51be9b1.ctex"
+[ext_resource type="Texture2D" uid="uid://cc1u7qjo3k5ku" path="res://Assets/generativetilemapLATESTFORREALL-export.png" id="1_ul4ad"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bo1nx"]
-texture = SubResource("CompressedTexture2D_bnvoy")
+texture = ExtResource("1_ul4ad")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:0/0/terrain_set = 0
