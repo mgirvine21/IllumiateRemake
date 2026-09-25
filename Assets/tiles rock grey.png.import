@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bop7uak6eiqn7"
-path="res://.godot/imported/generativetilemap-21.png-befc8aab96c8b29302a145c8c07bb5ac.ctex"
+uid="uid://bg35e602nub8"
+path="res://.godot/imported/tiles rock grey.png-bbefbc22b5c3de17972d1a323bed081c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/generativetilemap-21.png"
-dest_files=["res://.godot/imported/generativetilemap-21.png-befc8aab96c8b29302a145c8c07bb5ac.ctex"]
+source_file="res://Assets/tiles rock grey.png"
+dest_files=["res://.godot/imported/tiles rock grey.png-bbefbc22b5c3de17972d1a323bed081c.ctex"]
 
 [params]
 

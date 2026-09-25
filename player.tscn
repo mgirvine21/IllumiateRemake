@@ -6,6 +6,16 @@
 [ext_resource type="Texture2D" uid="uid://bihlwsg730yvv" path="res://Assets/player_walk.png" id="4_1jxqw"]
 [ext_resource type="Texture2D" uid="uid://diggsrm3n6a77" path="res://Assets/player_nest.png" id="4_sweqy"]
 
+[sub_resource type="Gradient" id="Gradient_21xkr"]
+offsets = PackedFloat32Array(0, 0.7169811)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sweqy"]
+gradient = SubResource("Gradient_21xkr")
+fill = 1
+fill_from = Vector2(0.5, 0.5117647)
+fill_to = Vector2(0, 0)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_dw050"]
 atlas = ExtResource("2_sweqy")
 region = Rect2(0, 0, 92, 92)
@@ -215,7 +225,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_op7ga")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 10.0
 }, {
@@ -244,7 +254,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jm5j8")
 }],
-"loop": true,
+"loop": 1,
 "name": &"fall",
 "speed": 7.0
 }, {
@@ -270,7 +280,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_efrwb")
 }],
-"loop": true,
+"loop": 1,
 "name": &"jump",
 "speed": 7.0
 }, {
@@ -302,7 +312,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ieltc")
 }],
-"loop": true,
+"loop": 1,
 "name": &"sleep",
 "speed": 10.0
 }, {
@@ -337,7 +347,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ibah8")
 }],
-"loop": true,
+"loop": 1,
 "name": &"walk",
 "speed": 12.0
 }]
@@ -351,11 +361,23 @@ collision_layer = 3
 collision_mask = 5
 script = ExtResource("1_hqtel")
 
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=2081800161]
+position = Vector2(-4.7683716e-07, -16)
+scale = Vector2(7.8437505, 7.3997645)
+color = Color(6.389535, 4.043846, 1.9913685, 1)
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 4.5
+texture = SubResource("GradientTexture2D_sweqy")
+texture_scale = 1.33
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1848031570]
+light_mask = 2
 sprite_frames = SubResource("SpriteFrames_y15wc")
 animation = &"jump"
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=614359349]
+visible = false
 position = Vector2(6, 19)
 shape = SubResource("CapsuleShape2D_c1fgu")
