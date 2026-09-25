@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" format=3 uid="uid://bmjwi0pdutttt"]
 
-[ext_resource type="Texture2D" uid="uid://cc1u7qjo3k5ku" path="res://Assets/generativetilemapLATESTFORREALL-export.png" id="1_ul4ad"]
+[ext_resource type="Texture2D" uid="uid://dc2xl3m8ejykr" path="res://Assets/finaktilemapcolored.png" id="1_ul4ad"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bo1nx"]
 texture = ExtResource("1_ul4ad")
@@ -378,6 +378,7 @@ texture_region_size = Vector2i(128, 128)
 0:4/0 = 0
 1:4/0 = 0
 2:4/0 = 0
+2:4/0/modulate = Color(0.14117648, 0.16862746, 0.8352941, 1)
 3:4/0 = 0
 9:4/0 = 0
 10:4/0 = 0
